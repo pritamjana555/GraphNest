@@ -97,7 +97,6 @@ export function Features() {
   return (
     <section id="features" className="py-20 bg-gradient-to-b from-background/95 via-accent/10 to-background/95 scroll-mt-20">
       <div className="container mx-auto px-4">
-        {/* Main Features */}
         <motion.div 
           className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
@@ -113,7 +112,7 @@ export function Features() {
           </p>
         </motion.div>
 
-        <div className="grid  lg:grid-cols-2 gap-12 mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {mainFeatures.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -121,9 +120,10 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
+              className="flex flex-col h-full"
             >
-              <Card className="h-full border-2 hover:shadow-lg transition-all duration-300 group backdrop-blur-sm bg-card/80 hover:bg-card/90">
-                <CardContent className="p-8">
+              <Card className="flex flex-col h-full border-2 hover:shadow-lg transition-all duration-300 group backdrop-blur-sm bg-card/80 hover:bg-card/90">
+                <CardContent className="flex flex-col p-8 flex-grow">
                   <div className="flex items-start space-x-4 mb-6">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                       <feature.icon className="h-8 w-8 text-white" />
@@ -136,8 +136,7 @@ export function Features() {
                       <p className="text-muted-foreground text-lg">{feature.description}</p>
                     </div>
                   </div>
-                  
-                  <div className="space-y-3">
+                  <div className="space-y-3 mt-auto">
                     {feature.features.map((item, itemIndex) => (
                       <motion.div
                         key={item}
@@ -158,7 +157,6 @@ export function Features() {
           ))}
         </div>
 
-        {/* Chart Types Showcase */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -184,8 +182,9 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="flex flex-col h-full"
             >
-              <Card className="text-center p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer backdrop-blur-sm bg-card/70 hover:bg-card/90 border hover:border-chart-1/30">
+              <Card className="flex flex-col text-center p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer backdrop-blur-sm bg-card/70 hover:bg-card/90 border hover:border-chart-1/30 flex-grow">
                 <div className="mb-4">
                   <chart.icon className={`h-8 w-8 mx-auto ${chart.color} group-hover:scale-110 transition-transform duration-300`} />
                 </div>
@@ -195,7 +194,6 @@ export function Features() {
           ))}
         </motion.div>
 
-        {/* Capabilities Grid */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -203,7 +201,7 @@ export function Features() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-semibold mb-4">Why Choose DataViz Studio</h3>
+          <h3 className="text-3xl font-semibold mb-4">Why Choose GraphCraft</h3>
           <p className="text-muted-foreground text-lg">Built for professionals who demand quality and efficiency</p>
         </motion.div>
 
@@ -221,8 +219,9 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="flex flex-col h-full"
             >
-              <Card className="text-center p-6 hover:shadow-lg transition-all duration-300 group backdrop-blur-sm bg-card/70 hover:bg-card/90">
+              <Card className="flex flex-col text-center p-6 hover:shadow-lg transition-all duration-300 group backdrop-blur-sm bg-card/70 hover:bg-card/90 flex-grow">
                 <div className={`w-16 h-16 bg-gradient-to-br ${capability.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   <capability.icon className="h-8 w-8 text-white" />
                 </div>

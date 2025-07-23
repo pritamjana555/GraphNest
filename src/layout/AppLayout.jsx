@@ -9,7 +9,7 @@ function AppLayout() {
           <Header/>
           <Outlet/>
         </main>
-        <footer className='text-center text-white w-full py-10 bottom-0 position-fixed'>Made with 💗 by Pritam</footer>
+        <footer className='text-center text-white w-full py-10 bottom-0 position-fixed'>Made with 💗 by Pritam, Aditya and Pratyush</footer>
     </div>
   )
 }
